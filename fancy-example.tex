@@ -474,6 +474,69 @@ The |ornamentedtabular| allows tables similar to those used for spellcasters
 \end{ornamentedtabular}
 \end{figure*}
 
+\section{Flowcharts}
+A flowchart can be used to summarise the major
+sections of an adventure, to help the reader
+understand story beats, transitions, events or
+major locations.
+
+The example below shows how to display a
+simple flowchart:
+
+% TODO: All this garbage needs to be parameterised
+% and moved into a .sty file in lib/ somehow.
+% TODO: Work out how to draw "etched" edges on the boxes.
+~\\
+\begin{tikzpicture}[
+  event/.style={draw, node distance=3cm, text width=8cm, align=left,
+                minimum height=1em, thick, draw=titlegold, fill=white!30},
+  eventlarge/.style={draw, node distance=3.5cm, text width=8cm, align=left,
+                     minimum height=4em, thick, draw=titlegold, fill=white!30},
+  line/.style={draw,thick,draw=titlegold}
+]
+\node (eventa) [event]
+{
+  \\[0pt]
+  \centering{
+    {\DndFontSubsubsection{\textbf{Event A}}}\\
+    \small\textit{For characters of level 3.}\\[6pt]
+  }
+
+  Different box styles can be defined to approximate
+  the size of different text content.
+};
+\node (eventb) [eventlarge,below of=eventa]
+{
+  \\[0pt]
+  \centering{
+    {\DndFontSubsubsection{\textbf{Event B}}}\\
+    \small\textit{For characters of level 4.}\\
+  }
+
+  Example of a larger box:
+  When a one-line description isn't enough,
+  sometimes you need to go into more detail.
+  It doesn't mean you need to drag on too
+  long though. The best authors always know when
+  they should
+};
+\node (eventc) [event,below of=eventb]
+{
+  \\[0pt]
+  \centering{
+    {\DndFontSubsubsection{\textbf{Event C}}}\\
+    \small\textit{For characters of level 5.}\\
+  }
+
+  More stuff.
+};
+
+% Join each of the event boxes together with a single
+% straight line.
+\path [line] (eventa)--(eventb);
+\path [line] (eventb)--(eventc);
+\end{tikzpicture}
+
 \chapter{Monsters and NPCs}
 
 
