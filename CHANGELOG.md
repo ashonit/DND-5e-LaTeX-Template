@@ -8,9 +8,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 ### Added
+* Portuguese translation
+
 * French translation
 
 * Automatically bolds the first row of tables
+
+* Added optional `proficiency-bonus` item to `\DnDMonsterDetails` that will be displayed next to the monster or NPC's challenge rating, as is the style in Candlekeep Mysteries and dndbeyond.
 
 ### Changed
 
