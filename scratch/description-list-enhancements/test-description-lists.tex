@@ -28,10 +28,22 @@
 
 \section{Regular Text}
 
+This section demonstrates description lists in regular paragraph text. Description lists are commonly used throughout D\&D documents to define terms, list equipment properties, and explain game mechanics.
+
 \begin{description}
   \item[Armor Class] Your defense against attacks.
   \item[Hit Points] How much damage you can take.
   \item[Speed] How far you can move in one turn.
+\end{description}
+
+The following changes were made to improve description list formatting:
+
+\begin{description}
+  \item[listparindent] Set to 0pt to eliminate problematic first-line indentation.
+  \item[itemindent] Set to 0pt to prevent item content from being indented.
+  \item[leftmargin] Adjusted to match context - 12pt for boxes, minimal for regular text.
+  \item[labelsep] Set to 1em to ensure proper spacing between labels and content.
+  \item[topsep] Maintained at 6pt for consistent vertical spacing.
 \end{description}
 
 \end{document}
