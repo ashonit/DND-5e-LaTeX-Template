@@ -491,7 +491,9 @@
 \NewDocumentCommand\DndQuote{ m m m }{
   \textsc{#1}
   {\small\textit{#2}}
-  \vspace{-6px}\par\hfill--{#3}
+  \par
+  \IfValueT{#3}{%
+  \IfStrEq{#3}{}{}{\hfill\small\textemdash#3\par\vspace{6pt}}}
 }
 
 \ExplSyntaxOn % New interface
