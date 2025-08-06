@@ -20,7 +20,9 @@
       "Bash(lualatex:*)",
       "Bash(rm:*)",
       "Bash(true)",
-      "Bash(/dev/null)"
+      "Bash(/dev/null)",
+      "Bash(./build-tests.sh:*)",
+      "Bash(mv:*)"
     ],
     "deny": []
   }

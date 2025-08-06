@@ -41,8 +41,9 @@ build_feature() {
     fi
     
     echo "Building AFTER version (feature branch)..."
-    git checkout "feature/$feature" >/dev/null 2>&1 || git checkout "private-customizations" >/dev/null 2>&1
-    lualatex --interaction=nonstropmode "$tex_file" >/dev/null 2>&1 || echo "Build failed"
+    # Try different branch naming patterns
+    git checkout "feature/$feature" >/dev/null 2>&1 || git checkout "feature/${feature//-/}" >/dev/null 2>&1 || git checkout "feature/description-lists" >/dev/null 2>&1 || git checkout "private-customizations" >/dev/null 2>&1
+    lualatex --interaction=nonstopmode "$tex_file" >/dev/null 2>&1 || echo "Build failed"
     if [ -f "${base_name}.pdf" ]; then
         mv "${base_name}.pdf" "${base_name}-after.pdf"
     fi
