@@ -12,3 +12,6 @@
 # Font files
 *.otf
 *.ttf
+
+# Testing and scratch work
+scratch/
