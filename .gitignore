@@ -8,3 +8,7 @@
 *.synctex.gz
 *.toc
 .DS_Store
+
+# Font files
+*.otf
+*.ttf
