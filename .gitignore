@@ -15,3 +15,5 @@
 
 # Testing and scratch work
 scratch/
+# Claude configuration
+.claude/
