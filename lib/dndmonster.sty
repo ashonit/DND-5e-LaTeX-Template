@@ -56,9 +56,13 @@
     parbox      = false,
     boxsep      = 0pt,
     toptitle    = 3mm,
+    top         = 3pt,
+    bottom      = 3mm,
     left        = 0pt,
     right       = 0pt,
     sharp~corners,
+    float*      = t,
+    after~float = \vfill{},
     borderline~north = {2pt} {0pt}   {statblocktitle},
     borderline~south = {2pt} {0pt}   {statblocktitle},
     opacityback = 0,
@@ -82,19 +86,21 @@
     parbox           = false,
     boxsep           = 2pt,
     toptitle         = 8pt,
-    top              = 0pt,
+    top              = 3pt,
     left             = 2pt,
     right            = 2pt,
     bottom           = 7pt,
     sharp~corners,
     oversize         = 0pt,
+    float*           = t,
+    after~float      = \vfill{},
     borderline~north = {3pt} {0pt}   {statblocktitle},
     borderline~north = {2pt} {0.5pt} {statblockribbon},
     borderline~south = {3pt} {0pt}   {statblocktitle},
     borderline~south = {2pt} {0.5pt} {statblockribbon},
-    colback          = statblockbg14,
-    colbacktitle     = statblockbg14,
-    colframe         = titlered,
+    colback          = statblockbg,
+    colbacktitle     = statblockbg,
+    colframe         = statblocktitle,
     fonttitle        = \DndFontStatBlockTitle,
     coltitle         = statblocktitle,
     fontupper        = \DndFontStatBlockBody,
@@ -406,7 +412,7 @@
   senses .initial:n        = \defaultsensesname,
   senses .value_required:n = true,
   languages .tl_set:N         = \l__languages_tl,
-  languages .initial:n        = ---,
+  languages .initial:n        = \textemdash,
   languages .value_required:n = true,
   challenge .tl_set:N         = \l__challenge_tl,
   %challenge .initial:n        = 1,
@@ -462,7 +468,7 @@
 
         #1 ~ (
         \int_compare:nNnTF {\l_tmpa_int} < {0}
-        { -- }
+        {-}
         {+}
         \int_abs:n \l_tmpa_int )
       }
@@ -655,7 +661,7 @@
       \vspace {2pt}\nopagebreak[4]
       \hrule height 0.6pt
     \group_end:
-      \par\nopagebreak[4] \vspace{5pt}\nopagebreak[4]
+      \par \vspace{5pt}
     \noindent \ignorespaces
   }
 
