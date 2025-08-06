@@ -48,7 +48,7 @@
 % passed to the environment by the user before it invokes the tcolorbox
 \cs_new_protected:Nn \__dnd_start_comment:nn
   {
-    \setlist[description]{nolistsep,listparindent=0pt,topsep=6pt,font={\bfseries\sffamily}}
+    \setlist[description]{nolistsep,listparindent=0pt,itemindent=0pt,leftmargin=0pt,labelsep=1em,topsep=6pt,font={\bfseries\sffamily}}
     \begin {__dnd_comment} [ #1, #2 ]
     \setlist[description]{nolistsep,listparindent=8pt,topsep=0pt,itemsep=0pt,parsep=0pt,partopsep=0pt,font={\bfseries\sffamily}}
     % Redefine description environment to automatically add \noindent and spacing before/after
