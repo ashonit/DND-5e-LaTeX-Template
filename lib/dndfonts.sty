@@ -69,6 +69,7 @@
             \newfontfamily{\sctitlefont}[Mapping=tex-text,Scale=MatchLowercase]{MrsEavesSmallCaps}
             \newfontfamily{\booktitlefont}[Mapping=tex-text]{Nodesto~Caps~Condensed}
             \newfontfamily{\quotefont}[Mapping=tex-text]{Zatanna Misdirection}
+            \newfontfamily{\wotcdropcapfont}[Mapping=tex-text]{Dungeon~Drop~Case}
           }
         \l__dnd_fontset_dmsguild_tl
           {
@@ -350,7 +351,12 @@
     page-number-style .value_required:n = true,
     % Drop caps
     drop-cap-family .tl_set:N         = \l__dnd_drop_cap_family_tl,
-    drop-cap-family .initial:n        = \Royal,
+    drop-cap-family .initial:n        = 
+      \tl_case:NnF \l__dnd_fontset_tl
+        {
+          \l__dnd_fontset_wotc_tl { \wotcdropcapfont }
+        }
+        { \Royal },
     drop-cap-family .value_required:n = true,
     drop-cap-style .tl_set:N         = \l__dnd_drop_cap_style_tl,
     drop-cap-style .value_required:n = true,
