@@ -63,7 +63,7 @@
       }
 
     % Set paragraph and line spacing
-    \setlength {\parindent}            {1em}
+    \setlength {\parindent}            {0.8em}
     \setlength {\RaggedRightRightskip} {0pt plus 1em}
     \setlength {\RaggedRightParindent} {\parindent}
 
