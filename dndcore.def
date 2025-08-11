@@ -18,6 +18,15 @@
 \RequirePackage [breakable,skins,xparse]{tcolorbox} % styled text boxes
 \RequirePackage {tikz} % drawing ornaments and lines
 \RequirePackage {xcolor}
+
+% Fix for nullfont warnings in recent LaTeX distributions
+% Recent LaTeX versions set \tracinglostchars=2 which makes previously hidden
+% nullfont warnings visible during tcolorbox/TikZ operations. These warnings
+% are cosmetic - characters render correctly in the final PDF.
+% This fix reduces the tracing level to 1, which still shows severe warnings
+% but suppresses the cosmetic nullfont warnings that flood the output.
+\tracinglostchars=1\relax
+
 \RequirePackage {xparse} % \NewDocumentCommand and expl3
 \RequirePackage {makecell}
 \RequirePackage {xtab}
