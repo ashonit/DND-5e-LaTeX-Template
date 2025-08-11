@@ -58,6 +58,11 @@
 \cs_new_protected:Nn \__dnd_start_sidebar:nn
   {
     \begin {__dnd_sidebar} [ #1, #2 ]
+    \setlist[description]{nolistsep,listparindent=8pt,topsep=0pt,itemsep=0pt,parsep=0pt,partopsep=0pt,font={\bfseries\sffamily}}
+    % Redefine description environment to automatically add \noindent and spacing before/after
+    \let\olddescription\description
+    \let\endolddescription\enddescription
+    \renewenvironment{description}{\vspace{0.5\baselineskip}\noindent\olddescription}{\endolddescription\vspace{0.5\baselineskip}}
   }
 
 \cs_generate_variant:Nn \__dnd_start_sidebar:nn { nV }
