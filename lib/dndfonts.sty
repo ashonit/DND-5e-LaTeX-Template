@@ -68,7 +68,8 @@
               Mapping=tex-text,
               BoldFont={Bookmania Bold},
               ItalicFont={Bookmania Italic}, 
-              BoldItalicFont={Bookmania Bold Italic}
+              BoldItalicFont={Bookmania Bold Italic},
+              SmallCapsFont={Bookmania Small Caps}
             ]{Bookmania}
             \setsansfont[
               Scale=MatchLowercase,
@@ -78,8 +79,19 @@
               ItalicFont={Scala Sans Italic},
               BoldItalicFont={Scala Sans Bold Italic}
             ]{Scala~Sans}
-            \newfontfamily{\sctitlefont}[Mapping=tex-text,Scale=MatchLowercase]{Mrs~Eaves~Small~Caps~OT}
-            \newfontfamily{\booktitlefont}[Mapping=tex-text]{Nodesto~Caps~Condensed}
+            \newfontfamily{\sctitlefont}[
+              Mapping=tex-text,
+              Scale=MatchLowercase,
+              BoldFont={Mrs Eaves Small Caps Bold},
+              ItalicFont={Mrs Eaves Small Caps Italic},
+              BoldItalicFont={Mrs Eaves Small Caps Bold Italic}
+            ]{Mrs~Eaves~Small~Caps}
+            \newfontfamily{\booktitlefont}[
+              Mapping=tex-text,
+              BoldFont={Nodesto Caps Condensed Bold},
+              ItalicFont={Nodesto Caps Condensed Italic},
+              BoldItalicFont={Nodesto Caps Condensed Bold Italic}
+            ]{Nodesto~Caps~Condensed}
             \newfontfamily{\quotefont}[Mapping=tex-text]{Zatanna Misdirection}
             \newfontfamily{\wotcdropcapfont}[Mapping=tex-text]{Dungeon~Drop~Case}
           }
