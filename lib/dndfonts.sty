@@ -64,9 +64,14 @@
             \RequirePackage{fontspec}
             \RequirePackage{xltxtra}
             \RequirePackage{xunicode}
-            \setromanfont[Mapping=tex-text]{Bookmania}
-            \setsansfont[Scale=MatchLowercase,Mapping=tex-text,Numbers=Lining]{Scala~Sans}
-            \newfontfamily{\sctitlefont}[Mapping=tex-text,Scale=MatchLowercase]{MrsEavesSmallCaps}
+            \setromanfont[
+              Mapping=tex-text,
+              BoldFont={Bookmania Bold},
+              ItalicFont={Bookmania Italic}, 
+              BoldItalicFont={Bookmania Bold Italic}
+            ]{Bookmania}
+            \setsansfont[Scale=MatchLowercase,Mapping=tex-text,Numbers=Lining]{Scala~Sans~OT}
+            \newfontfamily{\sctitlefont}[Mapping=tex-text,Scale=MatchLowercase]{Mrs~Eaves~Small~Caps~OT}
             \newfontfamily{\booktitlefont}[Mapping=tex-text]{Nodesto~Caps~Condensed}
             \newfontfamily{\quotefont}[Mapping=tex-text]{Zatanna Misdirection}
             \newfontfamily{\wotcdropcapfont}[Mapping=tex-text]{Dungeon~Drop~Case}
