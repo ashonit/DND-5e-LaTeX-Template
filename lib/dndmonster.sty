@@ -156,6 +156,15 @@
     #1
 }
 
+% Configure description environment for stat blocks
+\newlist {DndMonsterDescription} {description} {1}
+\setlist [DndMonsterDescription]
+  {
+    font     = \bfseries\sffamily,
+    labelsep = \l__dnd_space_dim,
+    nosep,
+  }
+
 % Alias DndMonster to correct background type
 \bool_if:NTF \l__dnd_show_background_bool
   {
@@ -179,6 +188,13 @@
         \let\DndMonster\DndMonsterClassicNoBg
         \let\endDndMonster\endDndMonsterClassicNoBg
       }
+  }
+
+% Override description environment within monster stat blocks
+\AtBeginEnvironment{DndMonster}
+  {
+    \let\description\DndMonsterDescription
+    \let\enddescription\endDndMonsterDescription
   }
 
 % Italicized text appearing immediately after monster's name
