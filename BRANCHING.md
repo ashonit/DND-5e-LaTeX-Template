@@ -210,6 +210,42 @@ git reset --hard upstream/main
 git push origin main --force-with-lease
 ```
 
+## Branch Cleanup After Merged PRs
+
+When PRs are merged upstream, clean up the feature branches:
+
+```bash
+# Delete local and remote fix branches that were merged
+git branch -D fix/branch-name
+git push origin --delete fix/branch-name
+
+# Sync main with upstream to get the merged changes
+git checkout main
+git fetch upstream
+git reset --hard upstream/main
+git push origin main --force-with-lease
+```
+
+## Personal Branching Strategy
+
+This repository maintains two distinct workflows:
+
+### For Upstream Contributions
+1. **Branch cleanly from main** when it's synced with upstream/main
+2. **Create focused fix branches** (e.g., `fix/description-lists`)  
+3. **Submit PRs to upstream** via GitHub
+4. **Delete fix branches** after merge to keep repository clean
+
+### For Private Features
+1. **Maintain personal feature branches** that merge into `dev`
+2. **Use `dev` as integration branch** for all personal modifications
+3. **Keep private branches** for ongoing development and reference
+
+This dual approach ensures:
+- Clean, focused contributions to upstream
+- Organized personal customizations in the `dev` branch
+- Easy maintenance and conflict resolution
+
 ## Best Practices
 
 1. **Never commit directly to main** - Always work through feature branches
@@ -217,7 +253,8 @@ git push origin main --force-with-lease
 3. **Use descriptive commit messages** - Follow conventional commits format
 4. **Test before merging** - Ensure LaTeX compilation succeeds
 5. **Regular upstream sync** - Weekly or before starting new features
-6. **Document breaking changes** - Update this file if workflow changes
+6. **Delete merged fix branches** - Keep repository clean after upstream PRs
+7. **Document breaking changes** - Update this file if workflow changes
 
 ## Commit Message Conventions
 
