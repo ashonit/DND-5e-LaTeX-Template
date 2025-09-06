@@ -466,7 +466,7 @@
 
         #1 ~ (
         \int_compare:nNnTF {\l_tmpa_int} < {0}
-        {-}
+        { -- }
         {+}
         \int_abs:n \l_tmpa_int )
       }
@@ -541,7 +541,7 @@
   {
     \color {statblocktitle}
     \par \vspace{1pt} \noindent
-    \begin{tabularx} {\linewidth} {cccccc}
+    \begin{tabularx} {\linewidth} {YYYYYY}
       \rule {0pt} {3.7mm} % adds space between hline and table
       \textbf {\strstatname} &
       \textbf {\dexstatname} &
@@ -659,7 +659,7 @@
       \vspace {2pt}\nopagebreak[4]
       \hrule height 0.6pt
     \group_end:
-      \par \vspace{5pt}
+      \par\nopagebreak[4] \vspace{5pt}\nopagebreak[4]
     \noindent \ignorespaces
   }
 
