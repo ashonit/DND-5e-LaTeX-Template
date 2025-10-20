@@ -265,15 +265,11 @@
   {
     \bool_if:NTF \l__dnd_modern_stats_bool
       {
-        \begin{tabularx} {\linewidth} {@{}X@{}X@{}}
+        \begin{tabularx} {\linewidth} {@{}X@{}}
           \begin {__dnd_monster_attributes}
-            \item [\armorclassname] \l__armor_class_tl
+            \item [\armorclassname] \l__armor_class_tl \hfill \textbf{Initiative}~\l__initiative_tl
             \item [\hitpointsname]  \l__hit_points_tl
             \item [\speedname]      \l__speed_tl
-          \end {__dnd_monster_attributes}
-          &
-          \begin {__dnd_monster_attributes}
-            \item [\initiativename] \l__initiative_tl
           \end {__dnd_monster_attributes}
           \\
         \end{tabularx}
