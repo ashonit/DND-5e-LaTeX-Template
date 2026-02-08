@@ -278,7 +278,7 @@
     area-num-depth .choice:,
     area-num-depth .choices:nn =
       { 1, 2, 3, 4 }
-      { \tl_set:Nn \l__dnd_area_num_depth_tl {\l_keys_choice_tl} },
+      { \tl_set:Nn \l__dnd_area_num_depth_tl {#1} },
     area-num-depth .initial:n  = 2, % subsection
   }
 

@@ -752,7 +752,7 @@
     distance .choice:,
     distance .choices:nn =
       { both, melee, ranged }
-      { \tl_set:Nn \l__dnd_attack_distance_tl {\l_keys_choice_tl} },
+      { \tl_set:Nn \l__dnd_attack_distance_tl { #1 } },
     distance .initial:n  = both,
     type .choice:,
     type / weapon .code:n = { \tl_set:Nn \l__dnd_attack_type_tl {\weaponname} },
