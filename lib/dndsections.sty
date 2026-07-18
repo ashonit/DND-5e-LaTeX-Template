@@ -177,6 +177,9 @@
   {
     \keys_set:nn { dnd / areas } { #1 }
   }
+% .initial:n inside \keys_define:nn runs inside a group, so the local tl_set
+% is discarded. Explicitly initialize here at package level (no active group).
+\tl_set:Nn \l__dnd_area_num_depth_tl { 2 }
 
 % Counters
 \newcounter {DndAreaCounter}
